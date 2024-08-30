@@ -19,10 +19,14 @@ function SignupForm() {
     formData.append('resume', resume);
 
     try {
-      await axios.post('https://job-app-backend-14.onrender.com/signup', formData);
+      await axios.post('https://job-app-backend-14.onrender.com/signup', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
       alert('Signup successful!');
     } catch (error) {
-      console.error(error);
+      console.error('Error:', error.response ? error.response.data : error.message);
       alert('Error during signup.');
     } finally {
       setLoading(false);
