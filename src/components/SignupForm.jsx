@@ -15,9 +15,14 @@ function SignupForm() {
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('resume', resume);
-
+    axios.post('https://job-app-backend-10.onrender.com/signup', { name, email, phone })
+    .then((result) => {
+      console.log(result);
+      // Redirect to login page after successful signup
+    })
+    .catch((err) => console.log(err));
     try {
-      await axios.post('https://job-app-backend-10.onrender.com/signup', formData);
+      await axios.post('https://job-app-backend-10.onrender.com/api/users/signup', formData);
       alert('Signup successful!');
     } catch (error) {
       console.error(error);
