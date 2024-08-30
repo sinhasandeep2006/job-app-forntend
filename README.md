@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 # Job Application Portal
 
+=======
+# Job Application Portal
+
+>>>>>>> 865027d2d0c01dedb443499fd98362c07cf68e47
 This project is a simple web application built using the MERN stack (MongoDB, Express, React with Vite, and Node.js). The application allows job seekers to sign up by filling out their personal information and uploading their resume. The application securely stores user information and resumes in a MongoDB database.
 
 
@@ -98,6 +103,7 @@ npm run dev
 - Visit the homepage and click on "Sign Up" to go to the signup form.
 - Fill in your personal details and upload your resume.
 - Click "Submit" to register your information.
+<<<<<<< HEAD
 ## Installation
 
 
@@ -355,6 +361,10 @@ npm run dev
 - Fill in your personal details and upload your resume.
 - Click "Submit" to register your information.
 
+=======
+
+
+>>>>>>> 865027d2d0c01dedb443499fd98362c07cf68e47
 ## Project Structure
 
 ```bash
