@@ -10,13 +10,15 @@ function SignupForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    
+
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('resume', resume);
     try {
-      await axios.post('https://job-app-backend-12.onrender.com/signup', formData);
+      await axios.post('https://job-app-backend-13.onrender.com/signup', formData);
       alert('Signup successful!');
     } catch (error) {
       console.error(error);
