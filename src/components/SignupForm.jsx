@@ -17,7 +17,7 @@ function SignupForm() {
     formData.append('resume', resume);
 
     try {
-      await axios.post('https://job-app-backend-9.onrender.com/signup', formData);
+      await axios.post('https://job-app-backend-10.onrender.com/signup', formData);
       alert('Signup successful!');
     } catch (error) {
       console.error(error);
