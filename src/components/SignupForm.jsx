@@ -6,23 +6,26 @@ function SignupForm() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [resume, setResume] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    
+    setLoading(true);
 
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('resume', resume);
+
     try {
       await axios.post('https://job-app-backend-14.onrender.com/signup', formData);
       alert('Signup successful!');
     } catch (error) {
       console.error(error);
       alert('Error during signup.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -63,7 +66,9 @@ function SignupForm() {
           required 
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" disabled={loading}>
+        {loading ? 'Submitting...' : 'Submit'}
+      </button>
     </form>
   );
 }
