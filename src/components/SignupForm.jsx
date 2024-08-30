@@ -22,7 +22,7 @@ function SignupForm() {
     })
     .catch((err) => console.log(err));
     try {
-      await axios.post('https://job-app-backend-10.onrender.com', formData);
+      await axios.post('https://job-app-backend-11.onrender.com/signup', formData);
       alert('Signup successful!');
     } catch (error) {
       console.error(error);
